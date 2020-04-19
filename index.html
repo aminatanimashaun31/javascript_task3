@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task3</title>
+</head>
+<body>
+	<script>
+		function replace( number ){
+     
+     var numbers = [];
+     
+     for( var divisor = 1; divisor <= number; divisor++ ){
+	 
+         if( ( divisor % 2 == 0 ) && ( divisor % 3 == 0 ) && ( divisor % 5 == 0 ) ){
+            
+             numbers.push("yu-gi-oh");
+
+         }else
+         if( ( divisor % 2 == 0 ) && (divisor % 5 == 0 ) ){
+            
+            numbers.push( "yu-oh" );
+
+         }else
+         if( ( divisor % 2 == 0 ) && ( divisor % 3 == 0 ) )
+	 {
+            numbers.push( "yu-gi" );
+         }	 
+         else 
+         if( ( divisor % 3 == 0 ) && (divisor % 5 == 0 ) ){
+
+              numbers.push("gi-oh");
+
+         } else
+         if( ( divisor % 2 ) == 0 )
+         {
+            numbers.push("yu");
+         }
+         else
+         if( ( divisor % 3 ) == 0 )
+         {
+            numbers.push("gi" );
+         }
+         else
+         if( ( divisor % 5 ) == 0 )
+         {
+            numbers.push("oh");
+         }
+         else{
+          numbers.push( divisor );
+         }
+         
+      }
+      
+      console.log( numbers );
+      return numbers;
+   }
+
+   replace(49);
+	</script>
+
+</body>
+</html>
